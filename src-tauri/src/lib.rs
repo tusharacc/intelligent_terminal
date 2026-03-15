@@ -1,5 +1,5 @@
-mod state;
-mod commands;
+pub mod state;
+pub mod commands;
 
 use std::sync::Mutex;
 use state::TerminalState;

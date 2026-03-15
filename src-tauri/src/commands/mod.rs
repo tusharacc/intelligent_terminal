@@ -84,6 +84,15 @@ pub fn execute_command(command: &str, state: State<'_, Mutex<TerminalState>>) ->
     Ok(last_output.unwrap_or_default())
 }
 
+/// Public wrapper for use by the CLI binary and tests
+pub fn execute_single_command_pub(
+    command: &str,
+    stdin: Option<String>,
+    st: &mut TerminalState,
+) -> Result<String, String> {
+    execute_single_command(command, stdin, st)
+}
+
 fn execute_single_command(
     command: &str,
     stdin: Option<String>,
