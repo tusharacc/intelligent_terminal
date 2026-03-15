@@ -1,0 +1,35 @@
+metadata:
+  title: Missing Flags Gap Analysis
+  requirements_source: command_requirements.yaml
+  rust_source_dir: src-tauri/src/commands
+  analysis_method: Static source code comparison
+summary:
+  total_flags_required: 570
+  total_implemented: 568
+  total_missing: 2
+  compliance_percentage: 99.6
+  commands_with_gaps: 2
+  commands_fully_compliant: 43
+gaps:
+  dir:
+    status: PARTIAL
+    rust_file: src-tauri/src/commands/dir.rs
+    total_required: 55
+    implemented: 54
+    missing: 1
+    missing_flags:
+    - names:
+      - --time=WORD
+      description: 'change the default of using modification times; access time (-u): atime, access, use; change time (-c):
+        ctime, status; birth time: birth, creation;'
+  vdir:
+    status: PARTIAL
+    rust_file: src-tauri/src/commands/vdir.rs
+    total_required: 56
+    implemented: 55
+    missing: 1
+    missing_flags:
+    - names:
+      - --time=WORD
+      description: 'change the default of using modification times; access time (-u): atime, access, use; change time (-c):
+        ctime, status; birth time: birth, creation;'

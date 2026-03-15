@@ -1,0 +1,35 @@
+# Rust / Cargo
+target/
+Cargo.lock
+
+# Node / Vite
+node_modules/
+dist/
+.vite/
+
+# Tauri build outputs
+src-tauri/target/
+src-tauri/WixTools/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Chroma DB
+.chroma/
+
+# Temp files
+/tmp/
